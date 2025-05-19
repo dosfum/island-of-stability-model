@@ -1,30 +1,48 @@
-
 # Superheavy Element Decay Modeling: Island of Stability Analysis
 
-This project models alpha decay and spontaneous fission lifetimes for superheavy isotopes (Z = 114–121, A = 385–400), identifying viable synthesis targets within the predicted "island of stability."
-
-### 🔬 Methodology
-- Qₐ computed using semi-empirical mass formula
-- Alpha half-lives via Geiger–Nuttall law
-- SF modeled via Z²/A instability and shell suppression
-- Stability Score = log₁₀(SF HL / Alpha HL)
-
-### 📈 Results
-- Qₐ becomes favorable (Qₐ > 0) near A = 392–400
-- Without shell effects, SF dominates all isotopes
-- With shell suppression at Z = 114, N = 184–196:
-  - **Flerovium-396 to Flerovium-400** emerge as prime alpha-stable candidates
-
-### 📊 Visuals
-- Qₐ heatmap
-- Decay mode dominance
-- Adjusted stability scores
-- Relative gain for Z = 114
-
-### 📄 Paper (PDF)
-*Coming soon: manuscript.tex and PDF-formatted report*
+This project presents a predictive decay analysis across superheavy isotopes (Z = 114–121, A = 385–400) to identify candidates with potential alpha-stable behavior near the hypothesized island of stability.
 
 ---
 
-**Author:** Aidan Fumagalli  
-With modeling support via OpenAI's tooling
+## 🔬 Methodology
+
+- **Qₐ Energetics** estimated using a semi-empirical mass formula (SEMF)
+- **Alpha Decay Half-Lives** from the Geiger–Nuttall law
+- **Spontaneous Fission (SF)** modeled via Z²/A instability heuristic
+- **Shell Correction** applied for Z = 114, N = 184–196 using a ×10¹⁰ SF half-life boost
+- **Stability Score**:  
+  \[
+  \log_{10}\left(\frac{\text{SF Half-Life}}{\text{Alpha Half-Life}}\right)
+  \]
+
+---
+
+## 📈 Key Results
+
+- Qₐ becomes energetically favorable above A ≈ 392
+- Without shell suppression, SF dominates all isotopes
+- With suppression modeled, **Flerovium-396 to 400 (Z = 114)** show positive stability scores
+- These isotopes are proposed as synthesis candidates for observing measurable alpha decay chains
+
+---
+
+## 📄 Manuscript
+
+> Full LaTeX manuscript and figures included in this repo:  
+➡️ [`manuscript.tex`](manuscript.tex)  
+➡️ Compile it via [Overleaf.com](https://overleaf.com) or LaTeX locally to view the PDF
+
+---
+
+## 🔍 Appendix B: Computational Details
+
+Included in the manuscript:
+- Full SEMF equation for Qₐ
+- Geiger–Nuttall constants used
+- SF decay modeling assumptions
+- Shell suppression heuristic implementation
+
+---
+
+**Author**: Aidan Fumagalli  
+With predictive modeling support from OpenAI tools
