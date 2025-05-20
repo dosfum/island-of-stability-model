@@ -6,10 +6,10 @@ This project models alpha decay and spontaneous fission (SF) lifetimes for super
 
 ## 🔬 Methodology Overview
 
-- **Qₐ (Alpha Decay Energy):** Calculated using a semi-empirical mass formula (SEMF)
-- **Alpha Decay Half-Life:** Derived from the Geiger–Nuttall relation
-- **Spontaneous Fission (SF):** Estimated based on Z²/A instability
-- **Shell Effects:** Fission half-life multiplied by 10¹⁰ for Z = 114, N = 184–196
+- **Qₐ (Alpha Decay Energy):** From a semi-empirical mass formula (SEMF)
+- **Alpha Half-Life:** Calculated via the Geiger–Nuttall relation
+- **Spontaneous Fission:** Estimated via Z²/A instability factor
+- **Shell Effects:** Modeled as a ×10¹⁰ SF half-life boost for Z = 114, N = 184–196
 - **Stability Score:**  
   \[
   \log_{10}\left(\frac{T_{1/2}^{\text{SF}}}{T_{1/2}^{\alpha}}\right)
@@ -19,66 +19,43 @@ This project models alpha decay and spontaneous fission (SF) lifetimes for super
 
 ## 📈 Key Findings
 
-- Qₐ > 0 beginning around A ≈ 392
-- Without shell suppression, SF dominates across the board
-- With modeled suppression, **Flerovium (Z = 114)** isotopes A = 396–400 show positive stability scores
-- These isotopes may support detectable alpha decay chains
+- Qₐ becomes favorable (Qₐ > 0) beginning around A ≈ 392
+- Without shell suppression, SF dominates all isotopes
+- With modeled suppression, **Flerovium-396 to 400** show positive stability scores and possible multi-step alpha chains
 
 ---
 
 ## 📄 Manuscript
 
-View the full research manuscript:
-- [`manuscript.tex`](manuscript.tex) — LaTeX source
-- Figures are embedded and listed in **Appendix C**
-- Compile via [Overleaf](https://overleaf.com) or `pdflatex` to generate a PDF
+- [`manuscript.tex`](manuscript.tex) — Full LaTeX source
+- Compile in [Overleaf](https://overleaf.com) or locally with `pdflatex`
+- Includes:
+  - Appendix **B**: Computational methods (equations and constants)
+  - Appendix **C**: Visualizations (heatmaps, bar chart)
 
 ---
 
-## 📂 Code
+## 💻 Code
 
-The `/code` folder contains reusable Python scripts for modeling and visualization:
+The `/code` directory contains all Python scripts used in this study:
 
 ### `code/decay_model.py`
-- Calculates:
-  - Binding energy (SEMF)
-  - Qₐ energy
-  - Alpha half-life
-  - SF half-life
-  - Stability score
+- Computes Qₐ, alpha half-life, SF half-life, and log₁₀ stability scores
 
 ### `code/generate_figures.py`
 - Generates:
   - Qₐ heatmap
   - Decay mode dominance map
   - Adjusted stability score heatmap
-  - Flerovium A = 395–400 stability gain chart
-
----
-
-## 📊 Appendix C: Visualizations
-
-These are included in the repo and manuscript:
-
-1. **Qₐ Heatmap**
-   ![Qα Heatmap](qalpha_heatmap.png)
-
-2. **Decay Mode Map**
-   ![Decay Mode Map](decay_mode_map.png)
-
-3. **Adjusted Stability Score Map**
-   ![Stability Score](stability_score_heatmap.png)
-
-4. **Relative Stability – Flerovium**
-   ![Flerovium Relative Stability](relative_stability.png)
+  - Relative stability chart for Flerovium
 
 ---
 
 **Author**: Aidan Fumagalli  
-*Modeling support via OpenAI tools*
+Modeling and tooling support via OpenAI
 
 ---
 
 ## 📬 Contact
 
-Interested in collaboration, synthesis modeling, or formal publication? Feel free to reach out via GitHub or link this project in preprint/academic circles.
+Open to collaboration, feedback, or experimental proposals — feel free to fork, cite, or reach out via GitHub.
